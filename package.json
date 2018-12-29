@@ -1,0 +1,15 @@
+{
+  "name": "websocket.io_the_net_ninja",
+  "version": "1.0.0",
+  "description": "A real time chatting app with websocket.io",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "websocket.io",
+    "real-time"
+  ],
+  "author": "Mohammad mohiuddin mostafa kamal akib <mohiuddinmostafakamal@gmail.com>",
+  "license": "MIT"
+}

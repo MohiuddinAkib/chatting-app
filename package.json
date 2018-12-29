@@ -4,7 +4,7 @@
   "description": "A real time chatting app with websocket.io",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "@powershell -Command $env:DEBUG='app:*'; nodemon app"
   },
   "keywords": [
     "websocket.io",
@@ -13,6 +13,12 @@
   "author": "Mohammad mohiuddin mostafa kamal akib <mohiuddinmostafakamal@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.4"
+    "debug": "^4.1.1",
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.9"
   }
 }

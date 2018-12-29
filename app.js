@@ -20,5 +20,15 @@ const server = app.listen(PORT, () => debug(`Server running on port ${PORT}`));
 const io = socket(server);
 
 io.on('connection', socket => {
-  debug('Made socket connection');
+  debug('Made socket connection', socket.id);
+
+  // Handle chat event
+  socket.on('chat', data => {
+    io.sockets.emit('chat', data);
+  });
+
+  // Handle typing event
+  socket.on('typing', data => {
+    socket.broadcast.emit('typing', data);
+  });
 });
